@@ -8,7 +8,7 @@ gem "line-bot-api"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem "rails", "~> 6.1.4"
 # Use mysql as the database for Active Record
-gem "mysql2", "~> 0.5"
+
 # Use Puma as the app server
 gem "puma", "~> 5.0"
 # Use SCSS for stylesheets
@@ -34,6 +34,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "pry-rails"
+  gem "mysql2", "~> 0.5"
 end
 
 group :development do
@@ -58,6 +59,10 @@ group :test do
   gem "faker"
   gem "rspec-rails"
   gem "webdrivers"
+end
+
+group :production do
+  gem "pg"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
